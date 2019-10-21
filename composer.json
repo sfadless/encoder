@@ -1,0 +1,22 @@
+{
+  "name": "sfadless/encoder",
+  "license": "proprietary",
+  "description": "Encodes and decodes values by key",
+  "require": {
+    "php": "^7.2",
+    "ext-mbstring": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Sfadless\\Encoder\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Sfadless\\Encoder\\Tests\\": "tests"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7"
+  }
+}
