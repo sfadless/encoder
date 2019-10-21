@@ -19,5 +19,5 @@ $dataToEncode = "Some value that should be encoded";
 $encoded = $encoder->encode($dataToEncode);
 $decoded = $encoder->decode($encoded);
 
-var_dump($dataToEncode, $decoded); //true
+var_dump($dataToEncode === $decoded); //true
 ```
