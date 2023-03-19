@@ -9,18 +9,13 @@ use Sfadless\Encoder\Encryptor\Base64Encryptor;
 use Sfadless\Encoder\Encryptor\EncryptorInterface;
 
 /**
- * EncoderTest
- *
  * @author Pavel Golikov <pavel@golikov.tech>
  */
-class EncoderTest extends TestCase
+final class EncoderTest extends TestCase
 {
-    /**
-     * @var EncryptorInterface
-     */
-    protected $encryptor;
+    protected EncryptorInterface $encryptor;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->encryptor = new Base64Encryptor();
     }
@@ -40,7 +35,7 @@ class EncoderTest extends TestCase
         );
     }
 
-    public function testEncodedWithDifferentKeyNotTheSame()
+    public function testEncodedWithDifferentKeyNotTheSame(): void
     {
         $key1 = '123qweASD!!!';
         $key2 = '123qweASD!!!+';
@@ -52,7 +47,7 @@ class EncoderTest extends TestCase
         $this->assertNotEquals($value, $decrypted);
     }
 
-    public function testDecodeWithBigKey()
+    public function testDecodeWithBigKey(): void
     {
         $value = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
 

@@ -5,17 +5,12 @@ declare(strict_types=1);
 namespace Sfadless\Encoder\Encryptor;
 
 /**
- * Base64Encryptor
- *
  * Алгоритм взят отсюда https://habr.com/sandbox/92985/
  *
  * @author Pavel Golikov <pavel@golikov.tech>
  */
 class Base64Encryptor implements EncryptorInterface
 {
-    /**
-     * @inheritDoc
-     */
     public function encrypt(string $value, string $key): string
     {
         $string = base64_encode($value);
@@ -33,9 +28,6 @@ class Base64Encryptor implements EncryptorInterface
         return $decoded;
     }
 
-    /**
-     * @inheritDoc
-     */
     public function decrypt(string $encrypted, string $key): string
     {
         $symbols = "qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFGHJKLZXCVBNM=";

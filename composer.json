@@ -3,7 +3,7 @@
   "license": "proprietary",
   "description": "Encodes and decodes values by key",
   "require": {
-    "php": "^7.2",
+    "php": ">=7.4",
     "ext-mbstring": "*"
   },
   "autoload": {
@@ -17,6 +17,6 @@
     }
   },
   "require-dev": {
-    "phpunit/phpunit": "^7"
+    "phpunit/phpunit": "^10"
   }
 }
